@@ -1,0 +1,8 @@
+<div class="navbar">
+  <h4>BooksWiki</h4>
+  <%= link_to raw("<p>New article</p>"), new_article_path %>
+</div>
+<% @articles.each do |article| %>
+  <%= link_to raw("<h1>#{article.title}</h1>"), article_path(article) %>
+  <p><%= article.content %></p>
+<% end %>
